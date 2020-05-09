@@ -1,0 +1,38 @@
+public class Overloaddemo{
+   void conversion(String no)//string into decimal radix
+   {
+       int result=Integer.parseInt(no);
+       System.out.println(result);
+    }
+   
+    void conversion(String no,int radix)//convert string into decimal based on radix
+    {
+        int result=Integer.parseInt(no,radix);
+        System.out.println(result);
+       
+    }
+    void conversion(int no)
+    {
+       int result= Integer.bitCount(no);//returns number of one's in the binary rep
+       System.out.println(result);
+       String r=Integer.toBinaryString(no);
+       System.out.println("binary conversion"+r);
+    }
+
+    
+}
+
+class Demo
+{
+    public static void main(String args[])
+    {
+       Overloaddemo p=new Overloaddemo();
+        /*p.conversion("1234");
+        p.conversion("101",2);//calls second method -2 arguments
+       p.conversion("AB",16);
+       p.conversion("256",8);
+       p.conversion("102",2);//call second method*/
+        p.conversion(14);
+        
+    }
+}
