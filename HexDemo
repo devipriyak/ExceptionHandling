@@ -1,0 +1,31 @@
+import java.util.Scanner;
+class HexDemo {
+    public static void main(String[] args) {
+    String s="";
+Scanner soc=new Scanner(System.in);
+System.out.println("enter String");
+try{
+for(int i=1;i<=4;i++)
+{
+s=soc.next();
+int n=Integer.parseInt(s,16);   
+System.out.println(n);
+}
+}
+catch(NumberFormatException n)
+{
+    System.out.println("Wrong input");
+}
+}
+}
+/*Output:
+enter String
+AB
+171
+1234
+4660
+12345
+74565
+AG
+Wrong input
+*/
