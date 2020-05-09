@@ -1,0 +1,37 @@
+
+import java.util.Scanner;
+
+public class multicatchsingleblock {
+
+   
+    public static void main(String[] args) {
+     int a,b;
+     //int arr[]=new int[-5];
+String s="";
+Scanner soc=new Scanner(System.in);
+System.out.println("enter a,b and String");
+a=soc.nextInt();
+b=soc.nextInt();
+s=soc.next();
+try{
+int result=a/b;//division if b==0
+System.out.println(result);
+
+System.out.println(s);
+int conversion=Integer.parseInt(s);//throw NumberFormatException
+int r=conversion*2;
+System.out.println("string to integer"+r);
+}   
+catch(ArithmeticException | NumberFormatException | NullPointerException e)
+{
+    System.out.println(e);
+    if(e instanceof ArithmeticException )
+        System.out.println("dont enter zero");
+    else  if(e instanceof NumberFormatException )
+        System.out.println("conversion not possible");
+    
+}
+System.out.println("continue.......");
+    }
+    
+}
