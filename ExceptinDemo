@@ -1,0 +1,37 @@
+
+import java.util.Scanner;
+
+class ExceptinDemo {
+   
+ public static void main(String[] args) {
+
+     int a,b;
+String s="";
+Scanner soc=new Scanner(System.in);
+System.out.println("enter a,b and String");
+a=soc.nextInt();
+b=soc.nextInt();
+s=soc.next();
+try{
+int result=a/b;//division if b==0
+System.out.println(result);
+
+System.out.println(s);
+int conversion=Integer.parseInt(s);//throw NumberFormatException
+int r=conversion*2;
+System.out.println("string to integer"+r);
+}   
+catch(ArithmeticException e)//divided by zero error
+{
+    
+        
+System.out.println("dont enter zero"+e);
+}
+catch(NumberFormatException e)
+{
+    System.out.println("conversion not possible");
+}
+
+System.out.println("continue.....the ..program");
+    
+}}
