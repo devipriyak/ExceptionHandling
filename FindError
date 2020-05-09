@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+ class ErrorsFind {
+    public static void main(String args[])
+    {
+          int a,b;
+    
+String s="";
+Scanner soc=new Scanner(System.in);
+System.out.println("enter a,b and String");
+a=soc.nextInt();
+b=soc.nextInt();
+s=soc.next();
+
+int result=a/b;//division if b==0
+System.out.println(result);
+
+System.out.println(s);
+int conversion=Integer.parseInt(s);//throw NumberFormatException
+int r=conversion*2;
+System.out.println("string to integer"+r);
+    
+    }
+}
+/*Output1:
+enter a,b and String
+10
+0
+priya
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at Identi.main(Identi.java:26)
+
+Output2:
+enter a,b and String
+12
+6
+devi
+2
+devi
+Exception in thread "main" java.lang.NumberFormatException: For input string: "devi"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+
+*/
